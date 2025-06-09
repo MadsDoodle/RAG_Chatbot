@@ -39,10 +39,10 @@ This project uses a modern, decoupled architecture to ensure scalability and mai
 ```mermaid
 graph TD
     A[End User] --> B(Streamlit Frontend on Streamlit Cloud);
-    B -->|API Request /query| C{FastAPI Backend on Render};
-    C -->|Search Query| D[ChromaDB on Render Persistent Disk];
+    B -->|"API Request /query"| C{FastAPI Backend on Render};
+    C <--> D[ChromaDB on Render Persistent Disk];
     D -->|Retrieved Summaries| C;
-    C -->|Fetch Full Content| F[Docstore (.pkl) on Persistent Disk];
+    C -->|"Fetch Full Content"| F["Docstore (.pkl) on Persistent Disk"];
     F -->|Original Text/Image| C;
     C -->|Augmented Prompt| E(OpenAI API);
     E -->|Generated Answer| C;

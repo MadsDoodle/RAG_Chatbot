@@ -1,15 +1,17 @@
+# backend/requirements.txt
+
 fastapi
 uvicorn
 langchain
-langchain-community
 langchain-openai
-langchain-groq
 python-dotenv
 chromadb
 tiktoken
-unstructured[all-docs]
+pandas
+
+# --- Optimized unstructured installation ---
+unstructured[pdf]
+
+# Pillow and lxml are often needed by unstructured
 pillow
 lxml
-camelot-py[cv]
-pandas
-ipython-genutils

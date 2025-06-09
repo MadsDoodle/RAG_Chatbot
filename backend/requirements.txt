@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-openai
+langchain-groq
+python-dotenv
+chromadb
+tiktoken
+unstructured[all-docs]
+pillow
+lxml
+camelot-py[cv]
+pandas
+ipython-genutils

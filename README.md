@@ -47,3 +47,22 @@ graph TD
     C -->|Augmented Prompt| E(OpenAI API);
     E -->|Generated Answer| C;
     C -->|Final Response| B;
+```
+
+### Project Structure
+```
+my-rag-chatbot/
+├── source_documents/
+│   └── 6._price_trends.pdf   <-- Place your source PDFs here
+│
+├── backend/
+│   ├── main.py               # FastAPI server logic
+│   ├── rag_logic.py          # All RAG processing and chains
+│   ├── requirements.txt      # Backend Python packages
+│   └── .env.example          # API Key template
+│
+├── frontend/
+│   ├── app.py                # Streamlit UI code
+│   └── requirements.txt      # Frontend Python packages
+│
+└── README.md                 # You are here!
